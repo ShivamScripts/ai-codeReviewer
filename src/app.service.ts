@@ -7,6 +7,7 @@ export class AppService {
   }
 
   get(): string {
+    console.log('hello world!')
     return 'Hello Primathon!';
   }
 }
