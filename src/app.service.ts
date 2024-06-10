@@ -7,7 +7,7 @@ export class AppService {
   }
 
   get(): string {
-    console.log('hello world!')
+    console.log('hello world, how is it going!')
     return 'Hello Prima!';
   }
 }
