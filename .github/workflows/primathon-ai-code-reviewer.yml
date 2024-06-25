@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 name: PrimathonAICodeReviewer
 
 permissions:
@@ -32,5 +30,3 @@ jobs:
           debug: false
           review_simple_changes: false
           review_comment_lgtm: false
-
->>>>>>> main
