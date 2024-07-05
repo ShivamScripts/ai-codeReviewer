@@ -8,6 +8,6 @@ export class AppService {
 
   get(): string {
     console.log('hello world, how is ig!')
-    return 'Hello Prima, how is th today please tell me eerbibi, whong.';
+    return 'Hello Prima,w is th today please tell me eerbibi, whong.';
   }
 }
