@@ -7,7 +7,7 @@ export class AppService {
   }
 
   get(): string {
-    console.log('hello world, how is it going!')
-    return 'Hello Prima, how is the weather!';
+    console.log('hello world, how is ig!')
+    return 'Hello Prima, how is the weere ibibi, whong.';
   }
 }
