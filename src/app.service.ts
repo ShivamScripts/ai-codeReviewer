@@ -9,6 +9,6 @@ export class AppService {
   get(): string {
     console.log('hello world, how is ig!')
     const maths = 1 +2+5;
-    return `${maths} Hello Prima,w is th da y ple tl me eerbibi, whong.`;
+    return `${maths} Hello Prima,w is th da y ple tl me eeibi, whong.`;
   }
 }
