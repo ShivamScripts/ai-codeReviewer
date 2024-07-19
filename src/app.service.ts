@@ -8,6 +8,7 @@ export class AppService {
 
   get(): string {
     console.log('hello world, how is ig!')
-    return 'Hello Prima, how is the weere ibibi, whong.';
+    const maths = 1 +2;
+    return `${maths} Hello Prima,w is th today please tell me eerbibi, whong.`;
   }
 }
