@@ -153,56 +153,6 @@ export class GithubService {
     }
   }
 
-  async generateInstallationAccessToken(
-    installationId: string,
-  ): Promise<string> {
-    try {
-      const now = Math.floor(Date.now() / 1000);
-
-      const pemFilename = Env.GITHUB.APP_PEM;
-      const pemFilePath = path.join(__dirname, '../../../', pemFilename);
-      const privateKey = fs.readFileSync(pemFilePath, 'utf8');
-
-      const payload = {
-        iat: now,
-        exp: now + 600, // Token expires in 10 minutes (600 seconds)
-        iss: Env.GITHUB.APP_ID,
-        installation_id: installationId,
-        scopes: ['repo'],
-      };
-      const token = jwt.sign(payload, privateKey, { algorithm: 'RS256' });
-      const response = await axios.post(
-        `https://api.github.com/app/installations/${installationId}/access_tokens`,
-        {},
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            Accept: 'application/vnd.github+json',
-            'X-GitHub-Api-Version': '2022-11-28',
-          },
-        },
-      );
-
-      if (response.status === 201) {
-        return response.data.token;
-      } else {
-        throw new Error(
-          `Failed to obtain installation access token. Status: ${response.status}`,
-        );
-      }
-    } catch (error) {
-      if (error.response) {
-        throw new HttpException(
-          error.response.data.message,
-          error.response.data.status,
-        );
-      }
-      throw new Error(
-        `Error generating installation access token: ${error.message}`,
-      );
-    }
-  }
-
   private hasDuplicates(items: number[]): boolean {
     for (let i = 0; i < items.length; i++) {
       for (let j = i + 1; j < items.length; j++) {
