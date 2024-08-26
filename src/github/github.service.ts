@@ -658,6 +658,7 @@ export class GithubService {
     for (let i = 0; i < items.length; i++) {
       for (let j = i + 1; j < items.length; j++) {
         if (items[i] === items[j]) {
+          console.log('items[i]', items[i], 'items[j]', items[j]);
           return true;
         }
       }
