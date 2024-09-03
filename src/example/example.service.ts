@@ -1,6 +1,5 @@
 export class ExampleService {
   public calculateAverage(numbers: number[]): number {
-    if (!numbers.length) return 0;
     let sum = 0;
     for (const num of numbers) {
       sum += num;
