@@ -7,7 +7,7 @@ export class AppService {
   }
 
   get(): string {
-    console.log('hello world, how is it going!')
-    return 'Hello Prima, how is the weather! how are you, what are you doing. what can i do for you today are you recieving we hook event';
+    console.log('hello world, how is ig!')
+    return 'Hello Prima, how is the we , whog.';
   }
 }
